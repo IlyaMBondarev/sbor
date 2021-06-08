@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datetime superapp</title>
+    <script src="./src/load.js"></script>
+    <script src="./src/main.js" type="module"></script>
+</head>
+
+<body>
+    <div id="switcher">
+        <h3>Header</h3>
+        <label>
+            <input type="radio" name="switcher" value="datecalc" data-load="dateValid" class="switcher__radio" checked>Калькулятор дат
+        </label>
+        <label>
+            <input type="radio" name="switcher" value="timer" data-load="timer" class="switcher__radio">Таймер
+        </label>
+    </div>
+
+    <form id="datecalc" style="display: none;">
+        <h3>Калькулятор дат</h3>
+        <label>
+            <strong>Первая дата:</strong>
+            <input type="date" name="firstDate" />
+        </label>
+        <label>
+            <strong>Вторая дата:</strong>
+            <input type="date" name="secondDate" />
+        </label>
+        <button type="submit">Расчитать промежуток</button>
+        <p id="datecalc__result"></p>
+    </form>
+
+    <form id="timer" style="display: none;">
+        <h3>Таймер</h3>
+        <label>
+            <strong>Количество часов:</strong>
+            <input id="hours" type="number" name="hours" placeholder="0" value="0" />
+        </label>
+        <label>
+            <strong>Количество минут:</strong>
+            <input id="minutes" type="number" name="minutes" placeholder="0" value="0" />
+        </label>
+        <label>
+            <strong>Количество секунд:</strong>
+            <input id="seconds" type="number" name="seconds" placeholder="0" value="0" />
+        </label>
+        <button type="submit">Запустить таймер</button>
+        <h3 id="timer__result"></h3>
+        <button id="stopTimer" type="button">Остановить таймер</button>
+    </form>
+</body>
+
+</html>
