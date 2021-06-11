@@ -1,5 +1,5 @@
 import { setTimer } from "./utils.js";
-loadScript("./src/howler.js", () => {}, 'text/javascript');
+import { Howl, Howler } from 'howler';
 
 const timerForm = document.getElementById("timer");
 const timerResult = document.getElementById("timer__result");
@@ -27,7 +27,7 @@ function handleTimer() {
 
 function startTimer(event) {
     let sound = new Howl({
-        src: ['../assets/sound.mp3']
+        src: ['./assets/sound.mp3']
     });
     event.preventDefault();
     stopTimer();

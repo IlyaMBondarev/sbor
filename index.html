@@ -4,37 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datetime superapp</title>
-    <script src="./src/load.js"></script>
-    <script src="./src/main.js" type="module"></script>
+    <title>Timer</title>
 </head>
 
 <body>
-    <div id="switcher">
-        <h3>Header</h3>
-        <label>
-            <input type="radio" name="switcher" value="datecalc" data-load="dateValid" class="switcher__radio" checked>Калькулятор дат
-        </label>
-        <label>
-            <input type="radio" name="switcher" value="timer" data-load="timer" class="switcher__radio">Таймер
-        </label>
-    </div>
-
-    <form id="datecalc" style="display: none;">
-        <h3>Калькулятор дат</h3>
-        <label>
-            <strong>Первая дата:</strong>
-            <input type="date" name="firstDate" />
-        </label>
-        <label>
-            <strong>Вторая дата:</strong>
-            <input type="date" name="secondDate" />
-        </label>
-        <button type="submit">Расчитать промежуток</button>
-        <p id="datecalc__result"></p>
-    </form>
-
-    <form id="timer" style="display: none;">
+    <form id="timer">
         <h3>Таймер</h3>
         <label>
             <strong>Количество часов:</strong>
